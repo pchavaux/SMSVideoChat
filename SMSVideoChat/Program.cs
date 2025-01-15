@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using SMSVideoChat.Hubs;
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSignalR();
+//builder.Services.AddSignalR();
 
 builder.Services.AddResponseCompression(opts =>
 {
@@ -71,5 +71,5 @@ app.MapRazorComponents<App>()
 
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
-app.MapHub<ChatHub>("/chathub");
+//app.MapHub<ChatHub>("/chathub");
 app.Run();
